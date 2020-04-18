@@ -27,14 +27,14 @@ public class Grid {
 
     public void initGrid() {
         String cellKey;
-        for (Integer rowNumber = 0; rowNumber < numberOfRows; rowNumber++) {
-            for (Integer colNumber = 0; colNumber < numberOfColumns; colNumber++) {
+        for (int rowNumber = 0; rowNumber < numberOfRows; rowNumber++) {
+            for (int colNumber = 0; colNumber < numberOfColumns; colNumber++) {
 
                 Rectangle rectangle = new Rectangle((rowNumber * cellSize) + PADDING, (colNumber * cellSize) + PADDING, cellSize, cellSize);
                 rectangle.setColor(Color.BLACK);
                 rectangle.draw();
 
-                cellKey = rowNumber.toString() + "-" + colNumber.toString();
+                cellKey = rowNumber + "-" + colNumber;
                 editorMap.put(cellKey, rectangle);
 
             }
